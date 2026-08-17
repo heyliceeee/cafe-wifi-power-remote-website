@@ -1,0 +1,102 @@
+/* --- Cards da listagem --- */
+
+.cafe-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cafe-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.cafe-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+    border-radius: 16px 16px 0 0;
+}
+
+.cafe-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cafe-title {
+    font-size: 1.1rem;
+    color: #4a3f7a;
+}
+
+.cafe-location {
+    color: #7a7a7a;
+    font-size: 0.95rem;
+}
+
+/* --- Página individual --- */
+
+.cafe-detail-card {
+    background: #ffffff;
+    border-radius: 18px;
+}
+
+.cafe-detail-img-wrapper {
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.cafe-detail-img {
+    width: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+.cafe-detail-location {
+    color: #6c6c6c;
+    font-size: 1.05rem;
+}
+
+.cafe-detail-item {
+    font-size: 1.05rem;
+    margin-top: 10px;
+}
+
+.badge-icon {
+    background: #e8e1ff;
+    padding: 6px 12px;
+    border-radius: 50px;
+    margin-right: 6px;
+    font-size: 0.9rem;
+}
+
+/* Remove underline from clickable cards */
+.cafe-card-link {
+    color: inherit;
+}
+
+/* Fundo pastel anime */
+.anime-bg {
+    background: linear-gradient(180deg, #fdfbff, #f7f4ff);
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* Navbar pastel com blur */
+.anime-navbar {
+    background-color: #ffffffcc;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 12px 0;
+}
+
+/* Subtítulo da navbar */
+.navbar-subtitle {
+    font-size: 0.9rem;
+    color: #7a7a7a;
+    font-weight: 500;
+}
+
+/* Container mais largo e respirável */
+.container {
+    max-width: 1100px;
+}

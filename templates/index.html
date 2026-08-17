@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row g-4 mt-0">
+    {% for c in cafes %}
+    <div class="col-md-4">
+
+        <!-- Card clicável -->
+        <a href="{{ url_for('cafe', cafe_id=c.id) }}" class="text-decoration-none cafe-card-link">
+
+            <div class="cafe-card shadow-sm">
+
+                <div class="cafe-img-wrapper">
+                    <img src="{{ c.img_url }}" class="cafe-img" alt="{{ c.name }}">
+                </div>
+
+                <div class="cafe-info p-3">
+                    <h5 class="fw-bold cafe-title">{{ c.name }}</h5>
+                    <p class="cafe-location">{{ c.location }}</p>
+                </div>
+
+            </div>
+
+        </a>
+
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

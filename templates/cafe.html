@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="/" class="btn-back mb-4 d-inline-flex align-items-center">
+    <i class="bi bi-arrow-left me-2"></i> Back
+</a>
+
+<div class="cafe-detail-card shadow-sm p-4">
+
+    <h2 class="fw-bold mb-3">{{ cafe.name }}</h2>
+
+    <div class="cafe-detail-img-wrapper mb-4">
+        <img src="{{ cafe.img_url }}" class="cafe-detail-img" alt="{{ cafe.name }}">
+    </div>
+
+    <p class="cafe-detail-location">{{ cafe.location }}</p>
+
+    {% if cafe.coffee_price %}
+    <p class="cafe-detail-item">☕ Coffee: <strong>{{ cafe.coffee_price }}</strong></p>
+    {% endif %}
+
+    {% if cafe.seats and cafe.seats != "Unknown" %}
+    <p class="cafe-detail-item">🪑 Seats: <strong>{{ cafe.seats }}</strong></p>
+    {% endif %}
+
+    <p class="cafe-detail-icons mt-3">
+        {% if cafe.has_wifi %}<span class="badge-icon">💪 Wifi</span>{% endif %}
+        {% if cafe.has_sockets %}<span class="badge-icon">🔌 Power</span>{% endif %}
+        {% if cafe.has_toilet %}<span class="badge-icon">🚻 Toilet</span>{% endif %}
+        {% if cafe.can_take_calls %}<span class="badge-icon">📞 Calls</span>{% endif %}
+    </p>
+
+    <a href="{{ cafe.map_url }}" target="_blank" class="btn-anime mt-4">
+        <i class="bi bi-geo-alt"></i> Open Map
+    </a>
+
+</div>
+
+{% endblock %}
